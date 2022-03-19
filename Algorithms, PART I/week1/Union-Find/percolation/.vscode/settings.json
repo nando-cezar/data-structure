@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\luissant\\OneDrive - Capgemini\\Documents\\Princeton University\\Algorithms, PART I\\week1\\Union-Find\\projects\\hello\\algs4.jar",
+        "c:\\Users\\luissant\\OneDrive - Capgemini\\Documents\\Princeton University\\Algorithms, PART I\\algs4.jar"
+    ]
+}
