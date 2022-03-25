@@ -1,4 +1,3 @@
-package directedgraphs;
 
 import java.util.Stack;
 

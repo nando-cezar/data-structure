@@ -1,4 +1,4 @@
-package directedgraphs;
+
 public class Graph {
 
     private final int V;

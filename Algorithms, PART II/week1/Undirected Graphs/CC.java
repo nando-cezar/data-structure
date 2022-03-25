@@ -1,16 +1,15 @@
-package directedgraphs;
-public class KosarajuSharirSCC {
+
+public class CC {
     
-    private boolean marked[];
+    private boolean[] marked;
     private int[] id;
     private int count;
 
-    public KosarajuSharirSCC(Digraph G){
+    public CC(Graph G){
         marked = new boolean[G.V()];
         id = new int[G.V()];
 
-        DepthFirstOrder dfs = new DepthFirstOrder(G.reverse());
-        for(int v: dfs.reversePost()){
+        for(int v = 0; v < G.V(); v++){
             if(!marked[v]){
                 dfs(G, v);
                 count++;
@@ -18,7 +17,15 @@ public class KosarajuSharirSCC {
         }
     }
 
-    private void dfs(Digraph G, int v){
+    public int count(){
+        return count;
+    }
+    
+    public int id(int v){
+        return id[v];
+    }
+
+    private void dfs(Graph G, int v){
         marked[v] = true;
         id[v] = count;
         for(int w: G.adj(v))
@@ -26,7 +33,7 @@ public class KosarajuSharirSCC {
                 dfs(G, w);
     }
 
-    public boolean stronglyConnected(int v, int w){
+    public boolean connected(int v, int w){
         return id[v] == id[w];
     }
 }

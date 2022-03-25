@@ -7,10 +7,6 @@ public class Bubble {
                 if(less(a[i], a[j])){
                     exch(a, i, j);
                 } 
-
-        for(int i = 0; i < N; i++)
-            System.out.println(a[i]);
-                
     }
 
     private static boolean less(Comparable v, Comparable w){

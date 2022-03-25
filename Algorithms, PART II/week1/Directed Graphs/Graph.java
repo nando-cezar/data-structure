@@ -1,4 +1,3 @@
-package undirectedgraphs;
 
 public class Graph {
 

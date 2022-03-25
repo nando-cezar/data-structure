@@ -1,4 +1,3 @@
-package undirectedgraphs;
 
 import java.util.Stack;
 

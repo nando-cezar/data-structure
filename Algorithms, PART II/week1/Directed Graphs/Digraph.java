@@ -1,4 +1,3 @@
-package directedgraphs;
 
 public class Digraph {
     
