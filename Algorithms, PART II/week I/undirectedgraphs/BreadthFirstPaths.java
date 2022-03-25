@@ -1,3 +1,6 @@
+package undirectedgraphs;
+
+
 public class BreadthFirstPaths {
     
     private boolean[] marked;
