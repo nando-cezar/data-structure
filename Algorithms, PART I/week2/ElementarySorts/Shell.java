@@ -1,24 +1,21 @@
 public class Shell {
 
-    public static void sort(Comparable[] a) {
-
-        int N = a.length;
+    public static void sort(Comparable[] a, int lo, int hi) {
 
         int h = 1;
 
-        while (h < N / 3)
+        while (h < hi / 3) // 3x + 1
             h = 3 * h + 1;
 
         while (h >= 1) {
-            for (int i = h; i < N; i++) {
-                for (int j = i; j >= h && less(a[j], a[j - h]); j -= h) {
-                    exch(a, j, j-h);
-                }
+            for (int i = h; i < hi; i++) {
+                for (int j = i; j >= h && less(a[j], a[j - h]); j -= h) 
+                    exch(a, j, j-h);       
             }
-        }
-        h = h/3;
-
-        for(int i = 0; i < N; i++)
+            h = h/3;
+        } 
+        
+        for(int i = lo; i < hi; i++)
             System.out.println(a[i]);
     }
 
@@ -40,6 +37,6 @@ public class Shell {
 
     public static void main(String[] args){
         Comparable[] numbers = {5, 3, 8, 2, 6, 8, 9, 10, 11, 12, 1};
-        Shell.sort(numbers);   
+        Shell.sort(numbers, 0, numbers.length);   
     }
 }

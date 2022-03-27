@@ -1,15 +1,17 @@
 public class Insertion {
     
-    public static void sort(Comparable[] a){
-        int N = a.length;
-        for(int i = 0; i < N; i++)
+    public static void sort(Comparable[] a, int lo, int hi){
+
+        for(int i = lo; i < hi; i++)
             for(int j = i; j > 0; j--)
                 if(less(a[j], a[j-1]))
                     exch(a, j, j-1);
                 else break;
 
-        for(int i = 0; i < N; i++)
-            System.out.println(a[i]);
+
+        for(int i = lo; i < hi; i++)
+           System.out.println(a[i]);
+        
     }
 
     private static boolean less(Comparable v, Comparable w){
@@ -30,6 +32,6 @@ public class Insertion {
 
     public static void main(String[] args){
         Comparable[] numbers = {5, 3, 8, 2, 6, 8, 9, 10, 11, 12, 1};
-        Insertion.sort(numbers);   
+        Insertion.sort(numbers, 0, numbers.length);   
     }
 }

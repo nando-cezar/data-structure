@@ -1,5 +1,10 @@
 {
     "java.project.sourcePaths": [
-        "Algorithms, PART I/week2/ElementarySorts"
+        "Algorithms, PART I/week2/ElementarySorts",
+        "Algorithms, PART I/week3/Mergesort"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Algorithms, PART I/algs4.jar"
     ]
 }

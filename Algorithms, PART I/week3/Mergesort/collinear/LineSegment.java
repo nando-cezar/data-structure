@@ -1,3 +1,5 @@
+package collinear;
+
 /*************************************************************************
  *  Compilation:  javac LineSegment.java
  *  Execution:    none

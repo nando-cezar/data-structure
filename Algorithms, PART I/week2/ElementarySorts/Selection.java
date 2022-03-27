@@ -1,15 +1,15 @@
 public class Selection {
 
-    public static void sort(Comparable[] a){
-        int N = a.length;
-        for(int i = 0; i < N; i++){
+    public static void sort(Comparable[] a, int lo, int hi){
+
+        for(int i = lo; i < hi; i++){
             int min = i;
-            for(int j = i+1; j < N; j++)
+            for(int j = i+1; j < hi; j++)
                 if(less(a[j], a[min]))
                     min = j;
             exch(a, i, min);
         }
-        for(int i = 0; i < N; i++)
+        for(int i = lo; i < hi; i++)
             System.out.println(a[i]);
     } 
 
@@ -31,7 +31,7 @@ public class Selection {
 
     public static void main(String[] args){
         Comparable[] numbers = {5, 3, 8, 2, 6, 8, 9, 10, 11, 12, 1};
-        Selection.sort(numbers);   
+        Selection.sort(numbers, 0, numbers.length);   
     }
     
 }

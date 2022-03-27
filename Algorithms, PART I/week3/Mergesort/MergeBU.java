@@ -5,7 +5,7 @@ public class MergeBU {
     public static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
         
         /* precondition */
-        assert isSorted(a, lo, mid);
+        /*assert isSorted(a, lo, mid);
         assert isSorted(a, mid + 1, hi);
 
         for (int k = lo; k <= hi; k++)
@@ -24,7 +24,7 @@ public class MergeBU {
                 a[k] = aux[i++];
         }
 
-        /* postcondition */
+        /* postcondition 
         assert isSorted(a, lo, hi);
     }
 
@@ -33,6 +33,12 @@ public class MergeBU {
         aux = new Comparable[N];
         for(int sz = 1; sz < N; sz = sz+sz) 
             for(int lo = 0; lo < N-sz; lo += sz+sz)
-                merge(a, lo, lo+sz-1, Math.min(lo+sz+sz-1, N-1)); 
+                MergeBU.merge(a, lo, lo+sz-1, Math.min(lo+sz+sz-1, N-1)); 
     }
+
+    private static boolean less(Comparable v, Comparable w){
+        return v.compareTo(w) < 0;
+    }*/
+    }
+    
 }
