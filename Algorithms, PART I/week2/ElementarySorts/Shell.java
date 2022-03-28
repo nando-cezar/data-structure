@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Shell {
 
     public static void sort(Comparable[] a, int lo, int hi) {
@@ -14,9 +16,6 @@ public class Shell {
             }
             h = h/3;
         } 
-        
-        for(int i = lo; i < hi; i++)
-            System.out.println(a[i]);
     }
 
     private static boolean less(Comparable v, Comparable w){
@@ -38,5 +37,6 @@ public class Shell {
     public static void main(String[] args){
         Comparable[] numbers = {5, 3, 8, 2, 6, 8, 9, 10, 11, 12, 1};
         Shell.sort(numbers, 0, numbers.length);   
+        System.out.println(Arrays.toString(numbers));
     }
 }

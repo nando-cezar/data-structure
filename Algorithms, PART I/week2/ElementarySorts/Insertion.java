@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Insertion {
     
     public static void sort(Comparable[] a, int lo, int hi){
@@ -7,11 +9,6 @@ public class Insertion {
                 if(less(a[j], a[j-1]))
                     exch(a, j, j-1);
                 else break;
-
-
-        for(int i = lo; i < hi; i++)
-           System.out.println(a[i]);
-        
     }
 
     private static boolean less(Comparable v, Comparable w){
@@ -32,6 +29,7 @@ public class Insertion {
 
     public static void main(String[] args){
         Comparable[] numbers = {5, 3, 8, 2, 6, 8, 9, 10, 11, 12, 1};
-        Insertion.sort(numbers, 0, numbers.length);   
+        Insertion.sort(numbers, 0, numbers.length);        
+        System.out.println(Arrays.toString(numbers));
     }
 }

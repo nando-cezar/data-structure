@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Bubble {
 
     public static void sort(Comparable[] a, int lo, int hi){
@@ -7,8 +9,6 @@ public class Bubble {
                 if(less(a[i], a[j])){
                     exch(a, i, j);
                 } 
-        for(int i = lo; i < hi; i++)
-            System.out.println(a[i]);
     }
 
     private static boolean less(Comparable v, Comparable w){
@@ -29,6 +29,7 @@ public class Bubble {
 
     public static void main(String[] args){
         Comparable[] numbers = {5, 3, 8, 2, 6, 8, 9, 10, 11, 12, 1};
-        Bubble.sort(numbers, 0, numbers.length);   
+        Bubble.sort(numbers, 0, numbers.length);      
+        System.out.println(Arrays.toString(numbers));
     }
 }
