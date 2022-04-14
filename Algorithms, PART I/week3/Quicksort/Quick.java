@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import edu.princeton.cs.algs4.Insertion;
 import edu.princeton.cs.algs4.StdRandom;
 
@@ -25,19 +27,20 @@ public class Quick {
         return j;
     }
 
-    public static void sort(Comparable[] a) {
-        StdRandom.shuffle(a);
-        sort(a, 0, a.length - 1);
-    }
-
     private static void sort(Comparable[] a, int lo, int hi) {
-        if (hi <= lo + CUTOFF -1){
+       /* if (hi <= lo + CUTOFF -1){
             Insertion.sort(a, lo, hi);
             return;
-        }
+        } */
+
+        if(hi <= lo) return;
+
+       /* int m = medianOf3(a, lo, lo + (hi - lo)/2, hi);
+        exch(a, lo, m); */
+
         int j = partition(a, lo, hi);
-        sort(a, lo, j+1);
-        sort(a, j+1, hi);
+        //sort(a, lo, j+1);
+        //sort(a, j+1, hi);
     }
 
     private static boolean less(Comparable v, Comparable w){
@@ -64,5 +67,12 @@ public class Quick {
                 return a[k];
         }
         return a[k];
+    }
+
+    public static void main(String[] args){
+        Comparable[] numbers = {1, 5, 3, 8, 2, 6, 11, 10, 8, 9, 12, 1};
+        //StdRandom.shuffle(numbers); 
+        Quick.sort(numbers, 0, numbers.length-1);   
+        System.out.println(Arrays.toString(numbers));
     }
 }
