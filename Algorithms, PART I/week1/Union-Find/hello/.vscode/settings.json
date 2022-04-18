@@ -1,8 +1,0 @@
-{
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\luissant\\OneDrive - Capgemini\\Desktop\\project\\algs4.jar"
-    ]
-}

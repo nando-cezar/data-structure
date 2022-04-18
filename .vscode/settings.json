@@ -3,10 +3,11 @@
         "Algorithms, PART I/week3/Quicksort",
         "Algorithms, PART I/week3/Mergesort",
         "Algorithms, PART I/week2/ElementarySorts",
-        "Algorithms, PART II/week1/Task/wordnet"
+        "Algorithms, PART I/week1/Union-Find/source",
+        "Algorithms, PART I/week4/ElementarySymbolTables/source"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "Algorithms, PART I/algs4.jar"
+        "library/algs4.jar"
     ]
 }
